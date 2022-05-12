@@ -35,7 +35,7 @@ const sphericalToCartesian = (distance, azimuth, elevation) => {
     )
 }
 
-Math.SmoothDamp = (current, target, currentVelocity, smoothTime = 1., maxSpeed = 1000, deltaTime) => {
+Math.SmoothDamp = (current, target, currentVelocity, smoothTime = 1., maxSpeed = 1000, deltaTime = .02) => {
     smoothTime = Math.max(0.0001, smoothTime);
     const num = 2 / smoothTime;
     const num2 = num * deltaTime;
@@ -52,7 +52,7 @@ Math.SmoothDamp = (current, target, currentVelocity, smoothTime = 1., maxSpeed =
         num8 = num5;
         currentVelocity = (num8 - num5) / deltaTime;
     }
-    return num8, currentVelocity;
+    return num8;
 }
 
 Math.HALF_PI = Math.PI / 2;
