@@ -46,7 +46,11 @@ Math.SmoothDamper = class SmoothDamper {
     }
 
     update(dt) {
-        this.value = Math.SmoothDamper(this.value, this.target, this.currentVelocity)
+        this.dt = dt;
+        const smoothed = Math.SmoothDamper(this.value, this.target, this.currentVelocity, this.smoothTime, this.maxSpeed, this.dt)
+        this.value = smoothed.value;
+        this.currentVelocity = smoothed.velocity;
+        return this.value;
     }
 }
 
