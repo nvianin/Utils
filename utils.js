@@ -35,7 +35,7 @@ const sphericalToCartesian = (distance, azimuth, elevation) => {
     )
 }
 
-Math.SmoothDamper = class SmoothDamper {
+Math.PowerLerper = class PowerLerper {
     constructor(current, target = current, smoothTime = 1., maxSpeed = 1000, deltaTime = .02) {
         this.value = current;
         this.target = target;
