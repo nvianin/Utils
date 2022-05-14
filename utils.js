@@ -81,10 +81,10 @@ Math.HALF_PI = Math.PI / 2;
 Math.QUARTER_PI = Math.PI / 4;
 Math.TWO_PI = Math.PI * 2;
 
-const multiCludes = (this, conditions) => {
+const multiCludes = (string, conditions) => {
     const includes = false;
     for (let c of conditions) {
-        if (this.includes(c)) {
+        if (string.includes(c)) {
             includes = true;
             break;
         }
