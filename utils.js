@@ -81,6 +81,20 @@ Math.HALF_PI = Math.PI / 2;
 Math.QUARTER_PI = Math.PI / 4;
 Math.TWO_PI = Math.PI * 2;
 
+const multiCludes = (this, conditions) => {
+    const includes = false;
+    for (let c of conditions) {
+        if (this.includes(c)) {
+            includes = true;
+            break;
+        }
+    }
+    return includes;
+}
+String.prototype.multiCludes = multiCludes;
+
+/* String.multicludes = multiCludes; */
+
 
 // Diacritics removal mess
 var defaultDiacriticsRemovalMap = [{
