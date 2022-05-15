@@ -26,6 +26,14 @@ Math.round_to_decimal = (val, digit = 2) => {
     return Math.floor(val * Math.pow(10, digit)) / Math.pow(10, digit)
 }
 
+Math.rad_to_deg = (rad) => {
+    return rad * 180 / Math.PI;
+}
+
+Math.deg_to_rad = (deg)=> {
+    return deg * Math.PI / 180;
+}
+
 //rho = distance, theta = azimuth, phi = elevation
 const sphericalToCartesian = (distance, azimuth, elevation) => {
     return new THREE.Vector3(
