@@ -91,7 +91,7 @@ Math.EIGHTH_PI = Math.PI / 8;
 Math.TWO_PI = Math.PI * 2;
 
 const multiCludes = (string, conditions) => {
-    const includes = false;
+    let includes = false;
     for (let c of conditions) {
         if (string.includes(c)) {
             includes = true;
