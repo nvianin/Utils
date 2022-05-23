@@ -1,7 +1,7 @@
 const log = console.log
 
 Math.lerp = (x, y, t) => {
-    return x * t + y * (1 - t);
+    return y * t + x * (1 - t);
 }
 
 Math.map = (v, x1, y1, x2, y2) => {
@@ -30,7 +30,7 @@ Math.rad_to_deg = (rad) => {
     return rad * 180 / Math.PI;
 }
 
-Math.deg_to_rad = (deg)=> {
+Math.deg_to_rad = (deg) => {
     return deg * Math.PI / 180;
 }
 
