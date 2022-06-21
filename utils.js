@@ -118,6 +118,14 @@ try {
         )
     }
 
+    const barycenter = (vectors) => {
+        const barycenter = new THREE.Vector3();
+        vectors.forEach(v => {
+            barycenter.add(v);
+        })
+        return barycenter.divideScalar(vectors.length);
+    }
+
     THREE.UP = new THREE.Vector3(0, 1, 0)
     THREE.DOWN = new THREE.Vector3(0, -1, 0)
     THREE.RIGHT = new THREE.Vector3(1, 0, 0)
